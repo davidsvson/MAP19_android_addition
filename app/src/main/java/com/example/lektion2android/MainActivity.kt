@@ -6,6 +6,8 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
+    //lateinit för vi inte vill att den ska kunna inehålla null
+    // men vi kan inte redan nu ge den ett värde
     lateinit var questionView : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,4 +21,6 @@ class MainActivity : AppCompatActivity() {
 
         questionView.text = "$firstNumber + $secondNumber ="
     }
+
+
 }
