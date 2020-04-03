@@ -1,5 +1,6 @@
 package com.example.lektion2android
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -23,9 +24,17 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.button)
 
         button.setOnClickListener {
-
+            startAnswerActivity()
         }
 
+    }
+
+    fun startAnswerActivity() {
+        //intent:et innehåller vilken activity vi är i och vilken activity vi ska till
+        val intent = Intent(this, AnswerActivity::class.java)
+
+        //skicka med vårt intent till startactivity metoden
+        startActivity(intent)
     }
 
     fun randomizeQuestion() {
